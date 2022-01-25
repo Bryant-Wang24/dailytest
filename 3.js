@@ -62,6 +62,38 @@ const unique7 = (arr) => {
     return newArray
 }
 
+// 八、双重for循环
+const unique8 = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                arr.splice(j, 1)
+            }
+        }
+    }
+    return arr
+}
+
+// 九、sort 该方法对数组的元素进行排序，并返回数组。 
+const unique9 = (arr)=> {
+    let afterSort = arr.sort()
+    let newArray = [afterSort[0]]
+    for (let i = 1; i < afterSort.length; i++) {
+        if (afterSort[i] !== afterSort[i - 1]) {
+            newArray.push(afterSort[i])
+        }
+    }
+    return newArray
+}
+
+// 十、forEach 该方法对数组的每个元素执行一次给定的函数。
+const unique10 = (arr)=>{
+    let newArray = []
+    arr.forEach(element => {
+        return newArray.includes(element) ? newArray : newArray.push(element)}
+    );
+    return newArray
+}
 
 const array = [1, 2, 3, 4, 5, 3, 2, 1]
 const result1 = unique1(array)
@@ -71,6 +103,9 @@ const result4 = unique4(array)
 const result5 = unique5(array)
 const result6 = unique6(array)
 const result7 = unique7(array)
+const result8 = unique8(array)
+const result9 = unique9(array)
+const result10 = unique10(array)
 console.log('result1', result1);
 console.log('result2', result2);
 console.log('result3', result3);
@@ -78,3 +113,6 @@ console.log('result4', result4);
 console.log('result5', result5);
 console.log('result6', result6)
 console.log('result7', result7)
+console.log('result8', result8)
+console.log('result9', result9)
+console.log('result10', result10)
