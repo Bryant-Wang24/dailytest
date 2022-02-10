@@ -13,6 +13,7 @@
         line-height: 100px;
     } */
 
+    /* 使用display: table-cell; */
     /* .father{
         display: table-cell;
         border: 1px solid red;
@@ -20,6 +21,7 @@
         vertical-align: middle;
     } */
 
+    /* 使用定位absolute+ 负margin */
     /* .father{
         position: relative;
         border: 1px solid red;
@@ -36,7 +38,8 @@
         margin-top: -100px;
     } */
 
-    .father{
+    /* 使用定位absolute+ margin:auto */
+    /* .father{
         position: relative;
         border: 1px solid red;
         height: 500px;
@@ -51,6 +54,20 @@
         right: 0;
         bottom: 0;
         margin: auto;
+    } */
+
+    /* 使用定位absolute + transform */
+    .father{
+        position: relative;
+        border: 1px solid red;
+        height: 500px;
+    }
+    .son{
+        position: absolute;
+        border: 1px solid black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 
     
