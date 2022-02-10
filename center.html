@@ -7,13 +7,20 @@
     <title>居中方法总结</title>
 </head>
 <style>
-    /* text-align和line-height */
-    .father{
+    /* .father{
         height: 100px;
         text-align: center;
-        /* 需要知道父元素的高度 */
         line-height: 100px;
+    } */
+
+    .father{
+        display: table-cell;
+        border: 1px solid red;
+        height: 100px;
+        vertical-align: middle;
     }
+
+    
 </style>
 <body>
     <div class="father">
