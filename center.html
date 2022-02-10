@@ -71,7 +71,7 @@
     } */
 
     /* 使用定位absolute + calc (calc里面的运算符前后必须空格隔开,否则不生效) */
-    .father{
+    /* .father{
         position: relative;
         border: 1px solid red;
         height: 500px;
@@ -83,8 +83,17 @@
         height: 200px;
         top: calc(50% - 100px);
         left: calc(50% - 100px);
-    }
+    } */
 
+
+    /* 使用display:flex */
+    .father{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        border: 1px solid red;
+    }
     
 </style>
 <body>
